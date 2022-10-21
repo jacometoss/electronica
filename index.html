@@ -1,0 +1,191 @@
+<html lang="en" class="h-100">
+<head>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://stacksnippets.net/scripts/snippet-javascript-console.min.js?v=1"></script>
+<style>
+body {
+
+
+    margin: 10% auto;
+	width: 30%;
+	background-image: url("https://i.ibb.co/2s034bN/back.jpg");
+background-position: center;
+
+
+	
+}
+</style>
+
+<title>Resultados de Electrónica</title>
+</head>
+<body>
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-12">
+<div id="buscar">
+
+<div class="form-group">
+<h1>Electrónica</h3>
+    <label for="exampleInputEmail1">Ingresa tu matrícula</label>
+    <input type="text" class="form-control" id="buscador" name="name" aria-describedby="textHelp" placeholder="Matrícula">
+    <small id="emailHelp" class="form-text text-muted">Ingresa la matrícula y consulta tu calificación</small>
+  </div>
+  
+
+</div>
+</div>
+
+
+
+
+
+<div class="col-12">
+<div id="resultado"></div>
+
+
+</div>
+
+</div>
+</div>
+<script type="text/javascript">
+let json = /*[
+
+  {
+    matricula: "1968",
+    nombre: "<h4>Carlos Fernando</h4>",
+	caificacion: "Calificación: 10",
+    datos: {
+      Puesto: "<div>xr-30s3-20</div>",
+      Id: 95
+    }
+  },
+  {
+	matricula: "<br>1668<br>",
+    nombre: "Luis Fernando<br>",
+	caificacion: 10,
+    datos: {
+      Puesto: "programador",
+      Id: 98
+    }
+  },
+  {
+	matricula: "<br>1768<br>",
+    nombre: "Carlos Hernandez<br>",
+	caificacion: 10,
+    datos: {
+      Puesto: "programador",
+      Id: 100
+    }
+  }
+];*/
+
+
+[
+{"id":"010373577","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 10</p></div>"},
+{"id":"010436955","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 10</p></div>"},
+{"id":"290452017","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 10</p></div>"},
+{"id":"240450812","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 10</p></div>"},
+{"id":"010574022","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 10</p></div>"},
+{"id":"010440994","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 10</p></div>"},
+{"id":"010445113","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 10</p></div>"},
+{"id":"240456922","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 10</p></div>"},
+{"id":"010451106","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 10</p></div>"},
+{"id":"300455611","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 10</p></div>"},
+{"id":"010196379","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 10</p></div>"},
+{"id":"010443837","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 10</p></div>"},
+{"id":"010456629","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 10</p></div>"},
+{"id":"010449656","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 9.84</p></div>"},
+{"id":"240415723","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 9.72</p></div>"},
+{"id":"240448281","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 9.7</p></div>"},
+{"id":"010443300","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 9.7</p></div>"},
+{"id":"010339528","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 9.7</p></div>"},
+{"id":"240454896","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 9.54</p></div>"},
+{"id":"390000761","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 9.4</p></div>"},
+{"id":"290461145","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 9.31</p></div>"},
+{"id":"290442885","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 9.2</p></div>"},
+{"id":"010440496","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 9.2</p></div>"},
+{"id":"010428979","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 9.18</p></div>"},
+{"id":"010456581","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 9.12</p></div>"},
+{"id":"200455256","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 9.06</p></div>"},
+{"id":"290457218","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 9.06</p></div>"},
+{"id":"330001387","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 9</p></div>"},
+{"id":"010439361","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 8.84</p></div>"},
+{"id":"330002137","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 8.8</p></div>"},
+{"id":"290441445","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 8.3</p></div>"},
+{"id":"010451364","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 8.2</p></div>"},
+{"id":"370000492","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 8.12</p></div>"},
+{"id":"370000465","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 7.78</p></div>"},
+{"id":"370000236","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 7.7</p></div>"},
+{"id":"010455046","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 7.6</p></div>"},
+{"id":"290403249","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 7.4</p></div>"},
+{"id":"010443398","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 7.2</p></div>"},
+{"id":"300447896","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 7.2</p></div>"},
+{"id":"010184269","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 7.18</p></div>"},
+{"id":"010445838","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 7.1</p></div>"},
+{"id":"010448605","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 7</p></div>"},
+{"id":"290443560","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 6.9</p></div>"},
+{"id":"010407913","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 6.5</p></div>"},
+{"id":"010448719","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 6.1</p></div>"},
+{"id":"010404922","calificacion":"<div class='alert alert-success' role='alert'><p>Tu calificación final es 6</p></div>"},
+{"id":"010358822","calificacion":"<div class='alert alert-danger' role='alert'><p>Tu calificación final es 5.9</p></div>"},
+{"id":"290450113","calificacion":"<div class='alert alert-danger' role='alert'><p>Tu calificación final es 5.5</p></div>"},
+{"id":"010448173","calificacion":"<div class='alert alert-danger' role='alert'><p>Tu calificación final es 5.35</p></div>"},
+{"id":"010450048","calificacion":"<div class='alert alert-danger' role='alert'><p>Tu calificación final es 4.3</p></div>"},
+{"id":"010447191","calificacion":"<div class='alert alert-danger' role='alert'><p>Tu calificación final es 3</p></div>"},
+{"id":"240440983","calificacion":"<div class='alert alert-danger' role='alert'><p>Tu calificación final es 1.35</p></div>"},
+{"id":"010445403","calificacion":"<div class='alert alert-danger' role='alert'><p>Tu calificación final es 0.16</p></div>"},
+{"id":"010448362","calificacion":"<div class='alert alert-danger' role='alert'><p>Tu calificación final es -</p></div>"},
+{"id":"370000383","calificacion":"<div class='alert alert-danger' role='alert'><p>Tu calificación final es -</p></div>"},
+{"id":"010461524","calificacion":"<div class='alert alert-danger' role='alert'><p>Tu calificación final es -</p></div>"},
+{"id":"010162481","calificacion":"<div class='alert alert-danger' role='alert'><p>Tu calificación final es -</p></div>"},
+{"id":"010457394","calificacion":"<div class='alert alert-danger' role='alert'><p>Tu calificación final es -</p></div>"},
+{"id":"010412158","calificacion":"<div class='alert alert-danger' role='alert'><p>Tu calificación final es -</p></div>"},
+{"id":"010387641","calificacion":"<div class='alert alert-danger' role='alert'><p>Tu calificación final es -</p></div>"},
+{"id":"010390750","calificacion":"<div class='alert alert-danger' role='alert'><p>Tu calificación final es -</p></div>"}
+];
+
+// el erray de los nombres seleccionados
+let seleccionados = [];
+// cada vez que el valor del elemento input cambia
+buscador.addEventListener("input", () => {
+  //vacia el array de los nombres seleccionados
+  seleccionados.length = 0;
+  //para más eficiencia crea un nuevo fragmento
+  let fragment = document.createDocumentFragment();
+  //recuoera el valor del input y guardalo en una variable
+  let elValor = buscador.value;
+  //si hay un valor
+  if (elValor.length >= 9) {
+  // busca en el json si el nombre incluye (o empieza por) el valor
+    json.forEach(j => {
+      //if(j.nombre.startsWith(elValor))
+      if (j.id.includes(elValor)) {
+        // si lo incluye agregalo al array de los seleccionados
+        seleccionados.push(j.calificacion);
+      }
+    });
+    //para cada elemento selccionado
+    seleccionados.forEach(s => {
+    //crea un nuevo elemento p
+      let p = document.createElement("p");
+      //cuyo innerHTML es el nombre seleccionado
+      p.innerHTML = s;
+      //y agregalo al fragmento
+      fragment.appendChild(p);
+    });
+    //vacía el resultado 
+    resultado.innerHTML = "";
+    //agrega el fragmento al resultado
+    resultado.appendChild(fragment);
+  }
+});
+</script>
+  </body>
+</html>
